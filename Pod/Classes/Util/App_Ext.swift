@@ -25,6 +25,10 @@ let pt26         = 31.0
 let pt28         = 33.5
 let pt30         = 36.0
 
+
+/**
+ 컬러에 대한 편의 기능을 제공합니다.
+ */
 extension UIColor {
     /// RGB가 각각 `red`, `green`, `blue`이고 opacity는 `a`인 Color object 반환
     convenience init(red: Int, green: Int, blue: Int, a: CGFloat = 1.0) {
@@ -37,6 +41,9 @@ extension UIColor {
 }
 
 // MARK: - UIColor
+/**
+ 컬러에 대한 편의 기능을 제공합니다.
+ */
 extension UIColor {
     /// RGB가 `hex`, opacity는 1에 해당하는 Color object 반환
     convenience init(intHex: Int) {
@@ -76,6 +83,9 @@ extension UIColor {
 }
 
 // MARK: - UILabel
+/**
+ 컬러에 대한 편의 기능을 제공합니다.
+ */
 extension UILabel {
     /// Opacity값이 `opacity`인 Color object 반환
     func text(_ text: String?, _ color:String, _ size:CGFloat, _ isBold:Bool) -> Void {
@@ -94,6 +104,9 @@ extension UILabel {
 }
 
 // MARK: - UIButton
+/**
+ 컬러에 대한 편의 기능을 제공합니다.
+ */
 extension UIButton {
     /// Opacity값이 `opacity`인 Color object 반환
     func setTitle(_ text: String, _ color:String, _ size:CGFloat, _ isBold:Bool) -> Void {
@@ -110,6 +123,9 @@ extension UIButton {
 }
 
 // MARK: - UIView : 부분 둥근 스타일
+/**
+ 컬러에 대한 편의 기능을 제공합니다.
+ */
 extension UIView {
     func roundCorners(cornerRadius: CGFloat, maskedCorners: CACornerMask) {
         clipsToBounds = true
@@ -160,6 +176,9 @@ extension UIView {
 }
 
 // MARK: - UITableField
+/**
+ 컬러에 대한 편의 기능을 제공합니다.
+ */
 extension UITextField {
     func text(_ text: String, _ color:String, _ size:CGFloat, _ isBold:Bool) -> Void {
         self.text = text
@@ -198,6 +217,9 @@ extension UITextField {
     }
 }
 
+/**
+ 컬러에 대한 편의 기능을 제공합니다.
+ */
 extension UITextView {
     func text(_ text: String, _ color:String, _ size:CGFloat, _ isBold:Bool) -> Void {
         self.text = text
@@ -231,6 +253,9 @@ extension UITextView {
 }
 
 // MARK: - String
+/**
+ 컬러에 대한 편의 기능을 제공합니다.
+ */
 extension String {
     // URL 인코딩 : 텍스트 전체 인코딩
     func urlEncParam() -> String {
@@ -304,6 +329,9 @@ extension String {
     }
 }
 
+/**
+ 컬러에 대한 편의 기능을 제공합니다.
+ */
 extension Int {
     func priceFormat() -> String {
         let numberFormatter = NumberFormatter()
@@ -314,6 +342,9 @@ extension Int {
 }
 
 // MARK: - Date
+/**
+ 컬러에 대한 편의 기능을 제공합니다.
+ */
 extension Date {
     public var year: Int {
         return Calendar.current.component(.year, from: self)
@@ -343,6 +374,9 @@ extension Date {
 }
 
 // MARK: - UIScrollView
+/**
+ 컬러에 대한 편의 기능을 제공합니다.
+ */
 extension UIScrollView {
     func setCommonAttribute() {
         if self is UITableView {
@@ -357,6 +391,9 @@ extension UIScrollView {
 }
 
 // MARK: - 좌측정렬 컬렉션뷰
+/**
+ 컬러에 대한 편의 기능을 제공합니다.
+ */
 class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
 
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
@@ -380,6 +417,9 @@ class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
 }
 
 // MARK: - StoreKit
+/**
+ 컬러에 대한 편의 기능을 제공합니다.
+ */
 extension SKProduct {
     var localizedPrice: String {
         let formatter = NumberFormatter()

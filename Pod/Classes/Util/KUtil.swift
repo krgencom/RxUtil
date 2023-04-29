@@ -1,7 +1,7 @@
 //
 //  KUtil.swift
 //
-//  Created by RemarkableSoft
+//  Created by Krgencom
 //
 import UIKit
 import Foundation
@@ -30,6 +30,9 @@ func println(_ _log: String = "", _filename: String = #file, _line: Int = #line,
 }
 
 
+/**
+ 여러가지 기능을 제공하는 유틸리티 클래스 입니다.
+ */
 class KUtil {
 //    static func pushVC(main: UIViewController, target:BaseViewController, _ animate: Bool = false, _ dic: Dictionary<String, String> = Dictionary()) {
 //        target.setParam(dic)

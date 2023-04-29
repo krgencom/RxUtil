@@ -1,13 +1,13 @@
 //
-//  UIColor_Ext.swift
-//  Weerket
-//
-//  Created by RemarkableSoft
+//  Created by Krgencom
 //
 
 import Foundation
 import UIKit
 
+/**
+ 색상을 쓰기쉽게 extension 을 제공합니다.
+ */
 extension UIColor {
     // 웹 색상을 RGB 값으로 변환하는 메서드
     static func rgb(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat, alpha: CGFloat = 1.0) -> UIColor {
