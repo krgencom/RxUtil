@@ -31,63 +31,12 @@ func println(_ _log: String = "", _filename: String = #file, _line: Int = #line,
 
 
 /**
- 여러가지 기능을 제공하는 유틸리티 클래스 입니다.
+ 여러가지 기능을 제공하는 유틸리티 클래스입니다.
+
+ KUtil 클래스는 앱에서 사용되는 다양한 유틸리티 기능을 제공합니다.
  */
 class KUtil {
-//    static func pushVC(main: UIViewController, target:BaseViewController, _ animate: Bool = false, _ dic: Dictionary<String, String> = Dictionary()) {
-//        target.setParam(dic)
-//        main.navigationController?.pushViewController(target, animated: animate)
-//    }
-//
-//    static func popVC(main: UIViewController, _ animate: Bool = false) {
-//        main.navigationController?.popViewController(animated: animate)
-//    }
-//
-//    static func presentVC(main: UIViewController, target:BaseViewController, _ animate: Bool = false, _ dic: Dictionary<String, String> = Dictionary()) {
-//        target.setParam(dic)
-//        target.modalPresentationStyle = .fullScreen
-//        main.present(target, animated: animate)
-//    }
-//
-//    static func dismissVC(main: UIViewController, _ animate: Bool = false, _ dic: Dictionary<String, String> = Dictionary()) {
-//        main.dismiss(animated: animate)
-//    }
-//
-//    static func popToViewControllerOfType<T: UIViewController>(_ navigationController: UINavigationController?, _ type: T.Type) {
-//        // ex: popToViewControllerOfType(MyViewController.self, self.navigationController)
-//        if let navigationController = navigationController {
-//            for viewController in navigationController.viewControllers {
-//                if viewController is T {
-//                    navigationController.popToViewController(viewController, animated: true)
-//                    break
-//                }
-//            }
-//        }
-//    }
-//
-//    static func pushOrPopToVC(main: UIViewController, target: BaseViewController, _ animate: Bool = false, _ dic: Dictionary<String, String> = Dictionary()) {
-//        target.setParam(dic)
-//
-//        if let navigationController = main.navigationController {
-//            var targetVC: UIViewController?
-//
-//            // navigationController.viewControllers를 검색하여 target이 있는지 확인합니다.
-//            for viewController in navigationController.viewControllers {
-//                if type(of: viewController) == type(of: target) {
-//                    targetVC = viewController
-//                    break
-//                }
-//            }
-//
-//            if let targetVC = targetVC {
-//                // targetVC가 이미 스택에 있으면 popToViewController로 이동합니다.
-//                navigationController.popToViewController(targetVC, animated: animate)
-//            } else {
-//                // 그렇지 않으면 pushViewController로 이동합니다.
-//                navigationController.pushViewController(target, animated: animate)
-//            }
-//        }
-//    }
+
     static func getSafeString(value: String?) -> String {
         return value ?? ""
     }
@@ -155,41 +104,3 @@ func textFieldLimit(_ tf: UITextField, _ maxSize: Int) {
         tf.text = String(text[..<index])
     }
 }
-//
-//var notificationIdentifiers: [String] = []
-//func localNotification(message: String) {
-//    let content = UNMutableNotificationContent()
-//    content.title = message
-//    content.body = ""
-//    content.sound = .default
-//
-//    // Configure the trigger for a specific time interval
-//    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5, repeats: false)
-//
-//    // Create a unique identifier for the request
-//    let requestIdentifier = UUID().uuidString
-//    notificationIdentifiers.append(requestIdentifier)
-//
-//    // Create the request with the content and trigger
-//    let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
-//
-//    // Schedule the request with the system
-//    let center = UNUserNotificationCenter.current()
-//    center.add(request) { error in
-//        if let error = error {
-//            // Handle the error here
-//            println("Error: \(error.localizedDescription)")
-//        }
-//    }
-//}
-//
-//// MARK: 모든 노티피케이션 삭제
-//func localNotificationClear() {
-//    let center = UNUserNotificationCenter.current()
-//
-//    // 예약알림 삭제
-//    center.removeAllPendingNotificationRequests()
-//
-//    // 제어센터 알림 삭제
-//    center.removeAllDeliveredNotifications()
-//}
