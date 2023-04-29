@@ -152,41 +152,41 @@ func textFieldLimit(_ tf: UITextField, _ maxSize: Int) {
         tf.text = String(text[..<index])
     }
 }
-
-var notificationIdentifiers: [String] = []
-func localNotification(message: String) {
-    let content = UNMutableNotificationContent()
-    content.title = message
-    content.body = ""
-    content.sound = .default
-
-    // Configure the trigger for a specific time interval
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5, repeats: false)
-
-    // Create a unique identifier for the request
-    let requestIdentifier = UUID().uuidString
-    notificationIdentifiers.append(requestIdentifier)
-
-    // Create the request with the content and trigger
-    let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
-
-    // Schedule the request with the system
-    let center = UNUserNotificationCenter.current()
-    center.add(request) { error in
-        if let error = error {
-            // Handle the error here
-            println("Error: \(error.localizedDescription)")
-        }
-    }
-}
-
-// MARK: 모든 노티피케이션 삭제
-func localNotificationClear() {
-    let center = UNUserNotificationCenter.current()
-    
-    // 예약알림 삭제
-    center.removeAllPendingNotificationRequests()
-    
-    // 제어센터 알림 삭제
-    center.removeAllDeliveredNotifications()
-}
+//
+//var notificationIdentifiers: [String] = []
+//func localNotification(message: String) {
+//    let content = UNMutableNotificationContent()
+//    content.title = message
+//    content.body = ""
+//    content.sound = .default
+//
+//    // Configure the trigger for a specific time interval
+//    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5, repeats: false)
+//
+//    // Create a unique identifier for the request
+//    let requestIdentifier = UUID().uuidString
+//    notificationIdentifiers.append(requestIdentifier)
+//
+//    // Create the request with the content and trigger
+//    let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
+//
+//    // Schedule the request with the system
+//    let center = UNUserNotificationCenter.current()
+//    center.add(request) { error in
+//        if let error = error {
+//            // Handle the error here
+//            println("Error: \(error.localizedDescription)")
+//        }
+//    }
+//}
+//
+//// MARK: 모든 노티피케이션 삭제
+//func localNotificationClear() {
+//    let center = UNUserNotificationCenter.current()
+//
+//    // 예약알림 삭제
+//    center.removeAllPendingNotificationRequests()
+//
+//    // 제어센터 알림 삭제
+//    center.removeAllDeliveredNotifications()
+//}
