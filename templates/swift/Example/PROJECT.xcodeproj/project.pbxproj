@@ -43,6 +43,7 @@
 		F4E5E9A229FDD294006296C0 /* uploadPod_base.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = uploadPod_base.sh; path = ../../../../uploadPod_base.sh; sourceTree = "<group>"; };
 		F4E5E9A329FDD294006296C0 /* uploadPod.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = uploadPod.sh; path = ../../../../uploadPod.sh; sourceTree = "<group>"; };
 		F4E5E9A429FDDA72006296C0 /* uploadGit.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = uploadGit.sh; path = ../../../../uploadGit.sh; sourceTree = "<group>"; };
+		F4E5E9A529FDE0DB006296C0 /* NotUse */ = {isa = PBXFileReference; lastKnownFileType = folder; name = NotUse; path = ../../../../Pod/NotUse; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +90,7 @@
 				F4E5E9A229FDD294006296C0 /* uploadPod_base.sh */,
 				F4E5E9A429FDDA72006296C0 /* uploadGit.sh */,
 				F4E5E9A329FDD294006296C0 /* uploadPod.sh */,
+				F4E5E9A529FDE0DB006296C0 /* NotUse */,
 				F4E5E9A029FD42CC006296C0 /* Util */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
