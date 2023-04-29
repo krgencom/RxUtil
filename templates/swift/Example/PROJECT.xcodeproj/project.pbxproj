@@ -40,6 +40,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		F4E5E99E29FD3B2C006296C0 /* RxUtil.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = RxUtil.podspec; path = ../../../../RxUtil.podspec; sourceTree = "<group>"; };
 		F4E5E9A029FD42CC006296C0 /* Util */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Util; path = ../../../../Pod/Classes/Util; sourceTree = "<group>"; };
+		F4E5E9A229FDD294006296C0 /* uploadPod_base.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = uploadPod_base.sh; path = ../../../../uploadPod_base.sh; sourceTree = "<group>"; };
+		F4E5E9A329FDD294006296C0 /* uploadPod.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = uploadPod.sh; path = ../../../../uploadPod.sh; sourceTree = "<group>"; };
+		F4E5E9A429FDDA72006296C0 /* uploadGit.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = uploadGit.sh; path = ../../../../uploadGit.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				F4E5E99E29FD3B2C006296C0 /* RxUtil.podspec */,
+				F4E5E9A229FDD294006296C0 /* uploadPod_base.sh */,
+				F4E5E9A429FDDA72006296C0 /* uploadGit.sh */,
+				F4E5E9A329FDD294006296C0 /* uploadPod.sh */,
 				F4E5E9A029FD42CC006296C0 /* Util */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
