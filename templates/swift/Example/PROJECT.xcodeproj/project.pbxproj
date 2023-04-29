@@ -13,8 +13,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		F4E5E99D29FD3A00006296C0 /* Util in Resources */ = {isa = PBXBuildFile; fileRef = F4E5E99C29FD3A00006296C0 /* Util */; };
 		F4E5E99F29FD3B2C006296C0 /* RxUtil.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F4E5E99E29FD3B2C006296C0 /* RxUtil.podspec */; };
+		F4E5E9A129FD42CC006296C0 /* Util in Resources */ = {isa = PBXBuildFile; fileRef = F4E5E9A029FD42CC006296C0 /* Util */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,8 @@
 		607FACE51AFB9204008FA782 /* PROJECT_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECT_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		F4E5E99C29FD3A00006296C0 /* Util */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Util; path = ../../../../Pod/Classes/Util; sourceTree = "<group>"; };
 		F4E5E99E29FD3B2C006296C0 /* RxUtil.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = RxUtil.podspec; path = ../../../../RxUtil.podspec; sourceTree = "<group>"; };
+		F4E5E9A029FD42CC006296C0 /* Util */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Util; path = ../../../../Pod/Classes/Util; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				F4E5E99E29FD3B2C006296C0 /* RxUtil.podspec */,
-				F4E5E99C29FD3A00006296C0 /* Util */,
+				F4E5E9A029FD42CC006296C0 /* Util */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -214,8 +214,8 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				F4E5E99F29FD3B2C006296C0 /* RxUtil.podspec in Resources */,
-				F4E5E99D29FD3A00006296C0 /* Util in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				F4E5E9A129FD42CC006296C0 /* Util in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

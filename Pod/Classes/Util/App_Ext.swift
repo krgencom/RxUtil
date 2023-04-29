@@ -6,7 +6,7 @@
 import Foundation
 import UIKit
 import StoreKit
-// MARK: ?°?Š¸ ?‚¬?´ì¦?
+// MARK: í°íŠ¸ ì‚¬ì´ì¦ˆ
 let pt9          = 11.0
 let pt10         = 12.0
 let pt11         = 13.0
@@ -26,7 +26,7 @@ let pt28         = 33.5
 let pt30         = 36.0
 
 extension UIColor {
-    /// RGBê°? ê°ê° `red`, `green`, `blue`?´ê³? opacity?Š” `a`?¸ Color object ë°˜í™˜
+    /// RGBê°€ ê°ê° `red`, `green`, `blue`ì´ê³  opacityëŠ” `a`ì¸ Color object ë°˜í™˜
     convenience init(red: Int, green: Int, blue: Int, a: CGFloat = 1.0) {
         self.init(red: CGFloat(red) / 255.0,
                   green: CGFloat(green) / 255.0,
@@ -38,7 +38,7 @@ extension UIColor {
 
 // MARK: - UIColor
 extension UIColor {
-    /// RGBê°? `hex`, opacity?Š” 1?— ?•´?‹¹?•˜?Š” Color object ë°˜í™˜
+    /// RGBê°€ `hex`, opacityëŠ” 1ì— í•´ë‹¹í•˜ëŠ” Color object ë°˜í™˜
     convenience init(intHex: Int) {
         self.init(
             red: (intHex >> 16) & 0xff,
@@ -69,7 +69,7 @@ extension UIColor {
         }
     }
     
-    // Opacityê°’ì´ `opacity`?¸ Color object ë°˜í™˜
+    // Opacityê°’ì´ `opacity`ì¸ Color object ë°˜í™˜
     func alpha(_ opacity: CGFloat) -> UIColor {
         return self.withAlphaComponent(opacity)
     }
@@ -77,7 +77,7 @@ extension UIColor {
 
 // MARK: - UILabel
 extension UILabel {
-    /// Opacityê°’ì´ `opacity`?¸ Color object ë°˜í™˜
+    /// Opacityê°’ì´ `opacity`ì¸ Color object ë°˜í™˜
     func text(_ text: String?, _ color:String, _ size:CGFloat, _ isBold:Bool) -> Void {
         self.text = text
         self.numberOfLines = 0
@@ -95,7 +95,7 @@ extension UILabel {
 
 // MARK: - UIButton
 extension UIButton {
-    /// Opacityê°’ì´ `opacity`?¸ Color object ë°˜í™˜
+    /// Opacityê°’ì´ `opacity`ì¸ Color object ë°˜í™˜
     func setTitle(_ text: String, _ color:String, _ size:CGFloat, _ isBold:Bool) -> Void {
         self.setTitle(text, for: UIControl.State.normal)
         self.setTitleColor(UIColor.init(hex: color), for: UIControl.State.normal)
@@ -109,7 +109,7 @@ extension UIButton {
     }
 }
 
-// MARK: - UIView : ë¶?ë¶? ?‘¥ê·? ?Š¤????¼
+// MARK: - UIView : ë¶€ë¶„ ë‘¥ê·¼ ìŠ¤íƒ€ì¼
 extension UIView {
     func roundCorners(cornerRadius: CGFloat, maskedCorners: CACornerMask) {
         clipsToBounds = true
@@ -174,7 +174,7 @@ extension UITextField {
         self.autocapitalizationType = .none
     }
     
-    // TextField ì¢Œì¸¡ ?—¬ë°? ?„¤? •
+    // TextField ì¢Œì¸¡ ì—¬ë°± ì„¤ì •
     func addLeftPadding(_ leftPadding: CGFloat) {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: leftPadding, height: self.frame.height))
         self.leftView = paddingView
@@ -186,7 +186,7 @@ extension UITextField {
         doneToolbar.barStyle = .default
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let done: UIBarButtonItem = UIBarButtonItem(title: "?™„ë£?", style: .done, target: self, action: #selector(self.doneButtonAction))
+        let done: UIBarButtonItem = UIBarButtonItem(title: "ì™„ë£Œ", style: .done, target: self, action: #selector(self.doneButtonAction))
         done.tintColor = .systemBlue
         let items = [flexSpace, done]
         doneToolbar.items = items
@@ -217,7 +217,7 @@ extension UITextView {
         doneToolbar.barStyle = .default
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let done: UIBarButtonItem = UIBarButtonItem(title: "?™„ë£?", style: .done, target: self, action: #selector(self.doneButtonAction))
+        let done: UIBarButtonItem = UIBarButtonItem(title: "ì™„ë£Œ", style: .done, target: self, action: #selector(self.doneButtonAction))
         done.tintColor = .systemBlue
         let items = [flexSpace, done]
         doneToolbar.items = items
@@ -232,14 +232,14 @@ extension UITextView {
 
 // MARK: - String
 extension String {
-    // URL ?¸ì½”ë”© : ?…?Š¤?Š¸ ? „ì²? ?¸ì½”ë”©
+    // URL ì¸ì½”ë”© : í…ìŠ¤íŠ¸ ì „ì²´ ì¸ì½”ë”©
     func urlEncParam() -> String {
         guard let encodedStr = self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
             return ""
         }
         return encodedStr
     }
-    // URL ?¸ì½”ë”© : ?ŒŒ?¼ë¯¸í„° ë¶?ë¶„ë§Œ ?¸ì½”ë”©
+    // URL ì¸ì½”ë”© : íŒŒë¼ë¯¸í„° ë¶€ë¶„ë§Œ ì¸ì½”ë”©
     func urlEnc() -> String {
         guard let encodedStr = self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             return ""
@@ -263,11 +263,11 @@ extension String {
             return ""
         }
         
-        // Index ê°? ?š?“
+        // Index ê°’ íšë“
         let startIndex = index(self.startIndex, offsetBy: from)
-        let endIndex = index(self.startIndex, offsetBy: to + 1) // '+1'?´ ?ˆ?Š” ?´?œ : endIndex?Š” ë¬¸ì?—´?˜ ë§ˆì??ë§? ê·? ?‹¤?Œ?„ ê°?ë¦¬í‚¤ê¸? ?•Œë¬?
+        let endIndex = index(self.startIndex, offsetBy: to + 1) // '+1'ì´ ìˆëŠ” ì´ìœ : endIndexëŠ” ë¬¸ìì—´ì˜ ë§ˆì§€ë§‰ ê·¸ ë‹¤ìŒì„ ê°€ë¦¬í‚¤ê¸° ë•Œë¬¸
         
-        // ?ŒŒ?‹±
+        // íŒŒì‹±
         return String(self[startIndex ..< endIndex])
     }
     
@@ -350,13 +350,13 @@ extension UIScrollView {
             self.showsHorizontalScrollIndicator = false
             self.showsVerticalScrollIndicator = false
         } else {
-            // ê°?ë¡? ?Š¤?¬ë¡? ?¸?””ì¼??´?„° ? œê±?
+            // ê°€ë¡œ ìŠ¤í¬ë¡¤ ì¸ë””ì¼€ì´í„° ì œê±°
             self.showsHorizontalScrollIndicator = false
         }
     }
 }
 
-// MARK: - ì¢Œì¸¡? •? ¬ ì»¬ë ‰?…˜ë·?
+// MARK: - ì¢Œì¸¡ì •ë ¬ ì»¬ë ‰ì…˜ë·°
 class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
 
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
