@@ -6,8 +6,6 @@
 import UIKit
 import Foundation
 import AVFoundation
-import ProgressHUD
-
 var _logTime: UInt64 = 0
 func println(_ _log: String = "", _filename: String = #file, _line: Int = #line, _funcName: String = #function) {
 #if DEBUG
