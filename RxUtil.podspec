@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RxUtil'
-  s.version          = '0.1.16'
-  s.summary          = 'A short description of RxUtil.'
+  s.version          = '0.1.17'
+  s.summary          = 'RxSwift utility functions for easy use in iOS projects.'
   s.swift_versions   = '5.0'
 
 # This description is used to generate tags and improve search results.
