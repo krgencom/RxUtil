@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RxUtil'
-  s.version          = '0.1.17'
+  s.version          = '0.1.18'
   s.summary          = 'RxSwift utility functions for easy use in iOS projects.'
   s.swift_versions   = '5.0'
 
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = 'A Library RxSwift'
+  s.description      = 'A library that provides various utility functions for working with RxSwift in iOS applications.'
 
   s.homepage         = 'https://github.com/krgencom/RxUtil'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
