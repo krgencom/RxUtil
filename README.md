@@ -137,6 +137,12 @@ YourUsername, Your Name 및 이메일 주소 등의 정보를 실제 정보로 �
 라이브러리 프로젝트를 Git 리포지토리에 푸시
 GitHub, GitLab 등 원격 저장소를 생성한 후, 프로젝트를 푸시하세요:
 
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/YourUsername/MyLibrary.git
+git push -u origin master
+
 위의 명령어에서 https://github.com/YourUsername/MyLibrary.git 부분을 실제 원격 저장소 주소로 변경하세요.
 
 라이브러리 태그 생성 및 푸시
