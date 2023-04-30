@@ -88,3 +88,77 @@ pod trunk push RxUtil.podspec
 pod 'RxUtil', '~> 0.1.0'
 
 라이브러리를 업데이트하려면 .podspec의 버전을 증가시키고, 변경 사항을 커밋한 후 새 태그를 추가하고 푸시합니다. 그런 다음, pod trunk push 명령을 다시 실행하세요.
+
+
+
+--------------------------------------
+당신의 라이브러리를 CocoaPods에 등록하여 다른 사람들이 쉽게 사용할 수 있도록 하려면 아래와 같은 단계를 따라주세요.
+
+라이브러리 프로젝트 생성
+터미널에서 다음 명령어를 실행하여 라이브러리 프로젝트를 생성합니다:
+
+pod lib create MyLibrary
+
+여기서 'MyLibrary'를 원하는 라이브러리 이름으로 변경하세요.
+
+라이브러리 코드 작성
+'Classes' 폴더 내에 새로운 Swift 파일을 생성하고, hello() 함수를 작성합니다.
+예를 들어, MyLibrary.swift 파일을 생성하고 다음 내용을 추가합니다:
+
+public class MyLibrary {
+    public init() { }
+
+    public func hello() {
+        print("Hello from MyLibrary!")
+    }
+}
+
+Podspec 파일 편집
+프로젝트 디렉토리 내의 MyLibrary.podspec 파일을 열어 필요한 정보를 작성합니다. 예를 들면 다음과 같습니다:
+
+Pod::Spec.new do |s|
+  s.name             = 'MyLibrary'
+  s.version          = '0.1.0'
+  s.summary          = 'A short description of MyLibrary.'
+  s.description      = 'MyLibrary is a simple library that provides a hello function.'
+
+  s.homepage         = 'https://github.com/YourUsername/MyLibrary'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'Your Name' => 'your.email@example.com' }
+  s.source           = { :git => 'https://github.com/YourUsername/MyLibrary.git', :tag => s.version.to_s }
+
+  s.ios.deployment_target = '10.0'
+  s.swift_version = '5.0'
+  s.source_files = 'MyLibrary/Classes/**/*'
+end
+
+YourUsername, Your Name 및 이메일 주소 등의 정보를 실제 정보로 변경하세요.
+
+라이브러리 프로젝트를 Git 리포지토리에 푸시
+GitHub, GitLab 등 원격 저장소를 생성한 후, 프로젝트를 푸시하세요:
+
+위의 명령어에서 https://github.com/YourUsername/MyLibrary.git 부분을 실제 원격 저장소 주소로 변경하세요.
+
+라이브러리 태그 생성 및 푸시
+버전 태그를 생성하고 푸시합니다:
+
+git tag '0.1.0'
+git push --tags
+
+CocoaPods Trunk에 등록
+CocoaPods Trunk에 라이브러리를 등록하려면 먼저 CocoaPods Trunk에 계정을 등록하세요. 계정이 없다면 다음 명령어를 사용
+
+계정이 없다면 다음 명령어를 사용하여 등록하세요:
+
+이메일로 발송된 인증 링크를 클릭하여 계정 등록을 완료하세요.
+
+라이브러리 CocoaPods Trunk에 푸시
+다음 명령어를 실행하여 CocoaPods Trunk에 라이브러리를 푸시합니다:
+
+pod trunk push MyLibrary.podspec
+
+이제 다른 사람들이 당신의 라이브러리를 사용할 수 있습니다. 사용자는 다음과 같이 Podfile에 라이브러리를 추가하여 사용할 수 있습니다:
+
+pod 'MyLibrary', '~> 0.1.0'
+
+CocoaPods에 라이브러리를 등록하고 관리하는 과정이 처음에는 복잡해 보일 수 있지만, 연습을 통해 익숙해질 수 있습니다. 이제 당신의 라이브러리를 다른 사람들과 공유하고 더 나은 프로젝트를 만들 수 있습니다!

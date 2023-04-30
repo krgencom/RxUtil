@@ -130,7 +130,11 @@ extension UIView {
     func roundCorners(cornerRadius: CGFloat, maskedCorners: CACornerMask) {
         clipsToBounds = true
         layer.cornerRadius = cornerRadius
-        layer.maskedCorners = CACornerMask(arrayLiteral: maskedCorners)
+        if #available(iOS 11.0, *) {
+            layer.maskedCorners = CACornerMask(arrayLiteral: maskedCorners)
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     func setRound(radius: CGFloat, borderColor: String = "#ffffff", borderWidth: CGFloat = 0) {
@@ -162,7 +166,11 @@ extension UIView {
             corner.insert(.layerMinXMaxYCorner)
 
         }
-        self.layer.maskedCorners = corner
+        if #available(iOS 11.0, *) {
+            self.layer.maskedCorners = corner
+        } else {
+            // Fallback on earlier versions
+        }
         self.clipsToBounds = true
     }
     
