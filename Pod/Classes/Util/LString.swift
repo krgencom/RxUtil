@@ -8,5 +8,5 @@
 import Foundation
 
 func LString(_ key: String, _ : String = "") -> String {
-    return NSLocalizedString(key, comment: "")
+    return NSLocalizedString(key, comment: "") 
 }
