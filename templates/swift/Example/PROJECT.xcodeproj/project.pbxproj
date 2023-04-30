@@ -38,6 +38,7 @@
 		607FACE51AFB9204008FA782 /* PROJECT_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECT_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		F4C886C729FDEBBC00EEC214 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../../README.md; sourceTree = "<group>"; };
 		F4E5E99E29FD3B2C006296C0 /* RxUtil.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = RxUtil.podspec; path = ../../../../RxUtil.podspec; sourceTree = "<group>"; };
 		F4E5E9A029FD42CC006296C0 /* Util */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Util; path = ../../../../Pod/Classes/Util; sourceTree = "<group>"; };
 		F4E5E9A229FDD294006296C0 /* uploadPod_base.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = uploadPod_base.sh; path = ../../../../uploadPod_base.sh; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				F4C886C729FDEBBC00EEC214 /* README.md */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for PROJECT */,
 				607FACE81AFB9204008FA782 /* Tests */,
