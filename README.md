@@ -18,29 +18,73 @@ pod install --repo-update
 
 -----------------------------
 
-새로운 pod 라이브러리를 iOS Swift 프로젝트에 추가하려면 다음 단계를 따르세요.
+CocoaPods 저장소에 라이브러리를 추가하려면 다음 단계를 따라주세요:
 
-새로운 라이브러리를 개발합니다. (ex. MyNewLibrary)
+라이브러리를 호스팅할 원격 저장소를 생성합니다. GitHub, GitLab, Bitbucket 등의 서비스를 사용하거나, 직접 호스팅할 수 있습니다.
 
-새로운 라이브러리를 등록할 때 사용되는 라이브러리 관리 도구인 Cocoapods를 설치합니다. 터미널에서 다음 명령어를 실행하세요.
+원하는 위치에 로컬 작업 디렉토리를 생성합니다. 이 디렉토리에서 라이브러리와 관련된 파일을 관리합니다. 예를 들어, RxUtil이라는 작업 디렉토리를 생성합니다:
 
-$ sudo gem install cocoapods
+mkdir RxUtil
+cd RxUtil
 
+로컬 작업 디렉토리에서 라이브러리의 소스 코드와 함께 .podspec 파일을 생성합니다. .podspec 파일은 라이브러리의 메타데이터와 종속성을 정의합니다. RxUtil.podspec이라는 파일을 생성하고 다음 내용을 추가합니다:
 
-새로운 라이브러리를 위한 podspec 파일을 작성합니다. 이 파일은 라이브러리에 대한 정보를 포함합니다.
+Pod::Spec.new do |s|
+  s.name             = 'RxUtil'
+  s.version          = '0.1.0'
+  s.summary          = 'A simple library providing a println function for Swift.'
 
-새로운 라이브러리를 위한 Github 저장소를 만듭니다.
+  s.description      = <<-DESC
+                        RxUtil is a simple library that provides a println function for Swift projects. It aims to make logging easier and more convenient.
+                       DESC
 
-새로운 라이브러리를 Github 저장소에 푸시합니다.
+  s.homepage         = 'https://github.com/yourusername/RxUtil'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'Your Name' => 'your@email.com' }
+  s.source           = { :git => 'https://github.com/yourusername/RxUtil.git', :tag => s.version.to_s }
 
-터미널에서 iOS Swift 프로젝트 디렉토리로 이동합니다.
-
-Podfile을 열어 새로운 라이브러리를 추가합니다.
-
-target 'MyProject' do
-  use_frameworks!
-
-  # 새로운 라이브러리 추가
-  pod 'MyNewLibrary', :git => 'https://github.com/yourusername/MyNewLibrary.git', :tag => '0.1.0'
+  s.ios.deployment_target = '10.0'
+  s.osx.deployment_target = '10.12'
+  s.tvos.deployment_target = '10.0'
+  s.watchos.deployment_target = '3.0'
   
-  
+  s.source_files = 'Sources/*.{h,swift}'
+
+  s.swift_version = '5.0'
+end
+
+라이브러리의 소스 코드를 작성합니다. Sources라는 폴더를 생성하고, 그 안에 println.swift라는 파일을 생성한 다음, 다음 내용을 추가합니다:
+
+import Foundation
+
+public func println(_ log: String = "", filename: String = #file, line: Int = #line, funcName: String = #function) {
+    print("\(log) [\(filename):\(line)] \(funcName)")
+}
+
+원격 저장소에 모든 변경 사항을 커밋하고 푸시합니다:
+
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/yourusername/RxUtil.git
+git tag -a 0.1.0 -m "Initial release"
+git push --tags
+git push -u origin master
+
+이제 .podspec 파일을 CocoaPods 저장소에 푸시할 수 있습니다. 먼저 CocoaPods Trunk에 등록되어 있는지 확인하고, 필요한 경우 등록하세요:
+
+pod trunk me
+
+등록되지 않은 경우 다음 명령으로 CocoaPods Trunk에 등록하세요:
+
+pod trunk register your@email.com 'Your Name' --description='Your computer description'
+
+이메일 인증 절차를 완료한 후, 다음 명령을 실행하여 .podspec 파일을 CocoaPods 저장소에 푸시합니다:
+
+pod trunk push RxUtil.podspec
+
+성공적으로 푸시하면, 다른 개발자들이 Podfile에 RxUtil을 추가하여 라이브러리를 사용할 수 있습니다:
+
+pod 'RxUtil', '~> 0.1.0'
+
+라이브러리를 업데이트하려면 .podspec의 버전을 증가시키고, 변경 사항을 커밋한 후 새 태그를 추가하고 푸시합니다. 그런 다음, pod trunk push 명령을 다시 실행하세요.
