@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RxUtil'
-  s.version          = '0.1.20'
+  s.version          = '0.1.21'
   s.summary          = 'RxSwift utility functions for easy use in iOS projects.'
   s.swift_versions   = '5.0'
 
