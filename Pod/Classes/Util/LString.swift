@@ -2,7 +2,7 @@
 //  LString.swift
 //  Weerket
 //
-//  Created by Krgencom
+//  Created by RemarkableSoft
 //
 
 import Foundation

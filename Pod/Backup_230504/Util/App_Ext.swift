@@ -6,7 +6,6 @@
 import Foundation
 import UIKit
 import StoreKit
-import SnapKit
 // MARK: 폰트 사이즈
 let pt9          = 11.0
 let pt10         = 12.0
